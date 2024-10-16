@@ -30,7 +30,10 @@ export interface Album {
     title: string,
     lowest_price: number,
     images: Image[],
-    artists: string[]
+    artists: Artist[]
+}
+export interface Artist {
+  name: string;
 }
 
 export interface Image {
