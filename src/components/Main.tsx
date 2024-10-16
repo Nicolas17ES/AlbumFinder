@@ -7,7 +7,7 @@ import { animateAlbumCards, resetAlbumCardsAnimation, animateOtherAlbums } from 
 
 const Main = (): JSX.Element => {
 
-    const {albums, isUserSearching, globalDebouncedValue, dispatch} = useContext(Context);
+    const {albums, isUserSearching, dispatch} = useContext(Context);
     const[resetListRef, setResetListRef] = useState<boolean>(false)
 
     const albumListRef = useRef<HTMLDivElement[]>([]);
@@ -17,9 +17,11 @@ const Main = (): JSX.Element => {
             albumListRef.current.push(el);
         }
     };
-    console.log('deb', globalDebouncedValue)
+
     useEffect(() => {
-        animateAlbumCards(albums, albumListRef);
+        if(albums) {
+            animateAlbumCards(albums, albumListRef);
+        }
     }, [albums]);
 
     useEffect(() => {

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from 'react';
+import { useRef, useEffect, useContext } from 'react';
 import gsap from 'gsap';
 import Context from '../context/Context';
 import { FaWindowClose } from "react-icons/fa";

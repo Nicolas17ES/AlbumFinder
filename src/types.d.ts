@@ -29,7 +29,8 @@ export interface Album {
     cover_image: string,
     title: string,
     lowest_price: number,
-    images: Image[]
+    images: Image[],
+    artists: string[]
 }
 
 export interface Image {

@@ -52,7 +52,7 @@ const SearchBar = (): JSX.Element => {
             <input
                 className="search-bar"
                 onChange={handleChange}
-                value={searchTerm}
+                value={searchTerm || ''}
                 type="search"
                 name="search"
                 id="search"

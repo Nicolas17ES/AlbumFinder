@@ -46,10 +46,10 @@ export const animateOtherAlbums = (
   setResetListRef(true);
 
   setTimeout(() => {
-    const clickedElement = albumListRef.current[clickedIndex];
+    const clickedElement = albumListRef.current![clickedIndex];
     const clickedRect = clickedElement.getBoundingClientRect();
 
-    const containerRect = albumListRef.current[0]?.parentElement?.getBoundingClientRect();
+    const containerRect = albumListRef.current![0]?.parentElement?.getBoundingClientRect();
 
     const clickedPosition = {
       top: clickedRect.top - (containerRect ? containerRect.top : 0),
@@ -58,7 +58,7 @@ export const animateOtherAlbums = (
       height: clickedRect.height,
     };
 
-    albumListRef.current.forEach((el, index) => {
+    albumListRef.current!.forEach((el, index) => {
       if (index !== clickedIndex) {
         const newPosition = {
           left: clickedPosition.left + clickedPosition.width,
