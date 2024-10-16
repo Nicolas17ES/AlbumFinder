@@ -1,7 +1,6 @@
 import { useContext, useEffect } from "react";
 import Context from "../context/Context";
 import { getAlbums } from "../context/Actions";
-import Header from "../components/Header";
 import Main from "../components/Main";
 
 const Home = (): JSX.Element => {
